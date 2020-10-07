@@ -1,4 +1,4 @@
-package com.chanzany.JUC;
+package com.chanzany.JUC.ConcurrentTutorial;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -15,12 +15,14 @@ import java.util.concurrent.CopyOnWriteArraySet;
  * 3. 解决方案
  * 3.1 Vector-->
  * public synchronized boolean add(E var1) 粗粒度加锁(对整个方法加锁)
+ *
  * 3.2 Collections.synchronizedList(new ArrayList<>()) -->
  * public void add(int var1, E var2) {
  * synchronized(this.mutex) { 中等粒度加锁(对方法体中的逻辑运算加锁)
  * this.list.add(var1, var2);
  * }
  * }
+ *
  * 3.3 CopyOnWriteArrayList-->
  * public boolean add(E var1) {
  * ReentrantLock var2 = this.lock; **细粒度加锁**(使用可重用锁对逻辑运算加锁)

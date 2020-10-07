@@ -1,4 +1,4 @@
-package com.chanzany.JUC;
+package com.chanzany.JUC.ConcurrentTutorial;
 
 /**
  * 1. 函数式编程
