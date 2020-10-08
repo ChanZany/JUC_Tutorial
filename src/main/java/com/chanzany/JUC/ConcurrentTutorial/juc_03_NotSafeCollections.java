@@ -23,10 +23,14 @@ import java.util.concurrent.CopyOnWriteArraySet;
  * }
  * }
  *
- * 3.3 CopyOnWriteArrayList-->
+ * 3.3  CopyOnWriteArrayList-->
  * public boolean add(E var1) {
- * ReentrantLock var2 = this.lock; **细粒度加锁**(使用可重用锁对逻辑运算加锁)
- * var2.lock();
+ *      ReentrantLock var2 = this.lock; **细粒度加锁**(使用可重用锁对逻辑运算加锁)
+ *      var2.lock();
+ *      xxx
+ * }
+ *      ConcurrentHashMap同理
+ *
  * 4. 优化建议
  */
 public class juc_03_NotSafeCollections {
