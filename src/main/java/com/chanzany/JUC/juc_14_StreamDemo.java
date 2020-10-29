@@ -1,4 +1,4 @@
-package com.chanzany.JUC.ConcurrentTutorial;
+package com.chanzany.JUC;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,14 +8,6 @@ import lombok.experimental.Accessors;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 @Data
 @NoArgsConstructor

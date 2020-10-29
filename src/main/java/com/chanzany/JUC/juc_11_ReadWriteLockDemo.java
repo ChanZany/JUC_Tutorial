@@ -1,4 +1,4 @@
-package com.chanzany.JUC.ConcurrentTutorial;
+package com.chanzany.JUC;
 
 import java.util.HashMap;
 import java.util.Map;
