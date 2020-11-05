@@ -1,5 +1,8 @@
 package com.chanzany.interview_secondary.juc_06_BlockingQueue;
 
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.TimeUnit;
+
 /**
  * 1. 为什么出现阻塞队列？
  * 有些场景下：必须要阻塞，不得不阻塞,如排号休息区等吃火锅
@@ -14,5 +17,32 @@ package com.chanzany.interview_secondary.juc_06_BlockingQueue;
  *     异步+通知
  */
 public class BlockingQueueDemo {
+
+    public static void main(String[] args) throws InterruptedException {
+        ArrayBlockingQueue<Object> blockingQueue = new ArrayBlockingQueue<>(3);
+        System.out.println(blockingQueue.add(1));
+        System.out.println(blockingQueue.add("str"));
+        System.out.println(blockingQueue.add(true));
+//        System.out.println(blockingQueue.add('a'));
+
+
+        System.out.println(blockingQueue.remove(1));
+        System.out.println(blockingQueue.remove("str"));
+        System.out.println(blockingQueue.remove(true));
+        System.out.println(blockingQueue.remove('a'));
+
+        /*System.out.println(blockingQueue.offer(1));
+        System.out.println(blockingQueue.offer("str"));
+        System.out.println(blockingQueue.offer(true));
+        System.out.println(blockingQueue.offer('a'));*/
+
+        /*System.out.println(blockingQueue.offer(1,1000, TimeUnit.MILLISECONDS));
+        System.out.println(blockingQueue.offer("str",1000, TimeUnit.MILLISECONDS));
+        System.out.println(blockingQueue.offer(true,1000, TimeUnit.MILLISECONDS));
+        System.out.println(blockingQueue.offer('a',1000, TimeUnit.MILLISECONDS));*/
+
+
+
+    }
 
 }
